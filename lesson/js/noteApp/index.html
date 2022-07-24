@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="col-12 background vh-100 d-flex justify-content-center align-items-center">
+        <div class="card col-12">
+            <div class="card-header col-6 text-center m-auto fs-2 fw-bold text-warning topic bg-danger">Simple Note Writer</div>
+            <div class="card-body col-6 m-auto d-flex justify-content-center">
+                <div class="col-12 d-flex justify-content-evenly">
+                    <input type="text" id="note" class="form-input col-8 d-inline px-2 fs-4" placeholder="anything to say ? ..."/>
+                    <button type="button" id="addbtn" class="form-input col-3 d-inline">add</button>
+                </div>
+            </div>
+            <div class="card-footer col-12 d-flex justify-content-evenly align-items-center itembox"></div>
+        </div>
+    </div>
+
+    <script src="../../lib/jquery/jquery.js"></script>
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <!-- <script src="test.js"></script> -->
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+@media screen and (max-width:600px) {
+    #sidebar{
+        transform: translateX(0px)rotate(0deg);
+        left: 150px;
+        top: 2vh;
+    }
+    #sidebar #side-holder .sidebar-item{
+        transform: rotate(0deg);
+    }
+    #welcome{
+        padding-top: 20vh;
+    }
+    #welcome #message-hold{
+        margin-bottom: 20vh;
+    }
+    #firstfour{
+        padding-bottom: 2vh;
+    }
+    #firstfour #first-card-hold{
+        flex-direction: column;
+    }
+    #firstfour #first-card-hold .first-card{
+        width: 98%;
+        margin-bottom: 2vh;
+    }
+    #bottomseven #bottom-topic{
+        margin-bottom: 2vh;
+    }
+    #bottomseven #bottom-card-hold1{
+        flex-direction: column;
+    }
+    #bottomseven #bottom-card-hold2{
+        flex-direction: column;
+    }
+    #bottomseven .bottom-card{
+        width: 94%;
+    }
+}

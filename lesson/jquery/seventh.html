@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery </title>
+</head>
+<body>
+    
+    <ul id="select">
+        <li value="mm">Myanmar</li>
+        <li value="cn">China</li>
+        <li value="kr">Korea</li>
+    </ul>
+
+
+</body>
+<script src="../lib/jquery/jquery.js"></script>
+<script>
+
+    //append
+    $("#select").append(`<li>us</li>`);
+    $("#select").append(`<li>uk</li>`);
+
+    //prepend
+    $("#select").prepend(`<li>one</li>`);
+    $("#select").prepend(`<li>one</li>`);
+
+    // before
+    $("#select").before(`<p>This is before</p>`);
+
+    // after
+    $("#select").after(`<p>This is after.</p>`);
+
+</script>
+</html>

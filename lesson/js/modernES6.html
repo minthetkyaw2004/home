@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        // using back tip ` and concantenate
+        const colors = ['red','blue','green'];
+        const items = colors.map(color => `<li>${color}</li>`);
+        console.log(items); 
+
+//____________________________________________________________________________
+
+        // object destructuring
+        const address = {
+            street : '',
+            city : '',
+            country : ''
+        };
+        const street = address.street;
+        const city = address.city;
+        const country = address.country;
+        const { street :st } = address;
+
+//_______________________________________________________________________________        
+
+        // spread operator
+        const firstArray = [1,2,3];
+        const secondArray = [4,5,6];
+
+        // const combined = first.concat(second);
+        const combinedArray = [...first, 'a', ...second, 'b'];  // ... spread operator
+        const clone = [...first];
+        console.log(first);
+        console.log(clone);
+
+        // object concentenate
+        const first = {name : 'MTK'};
+        const second = {job : 'student'};
+        const combined = {...first, ...second, location : 'Myanmar'};
+        console.log(combined);
+
+//___________________________________________________________________________________
+
+        // classes
+        class Person {
+            constructor(name) {
+                this.name = name;
+            }
+
+            walk() {
+                console.log('walk');
+            }
+        }
+        const person = new Person('MTK');
+        person.walk();
+
+//______________________________________________________________________________________
+
+        // inheritance
+        // inherit constructor needs super()
+        class Student extends Person {
+            constructor(name, degree) {
+                super(name);
+                this.degree = degree;
+            }
+            learn() {
+                console.log('learn');
+            }
+        }
+        const student = new Student('MTK', 'student');
+        student.learn();
+
+        // modules 
+        // export class from one file 
+        // export class from another file
+        // import { class } from './location';      on top of the file you want to use
+        // ctrl + space for finding obj and functions in target file 
+
+        // in react ..... import React, { Component } from 'react';
+
+
+//________________________________________________________________________________________
+
+
+
+
+        
+    </script>
+</body>
+</html>

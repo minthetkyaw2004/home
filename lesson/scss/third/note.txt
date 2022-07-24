@@ -1,0 +1,4 @@
+first crate index in a directory
+then npm init and install packages
+then create a scss folder with file scss
+then link it with scss in package folder in node modules 

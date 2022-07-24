@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Calendar</title>
+</head>
+<body class="day">
+    
+    <div class="container">
+        <div class="col1">
+            <div class="col1_row1">
+                <div class="col1_row1_col1" id="month">April</div>
+                <div class="col1_row1_col2" id="year">2022</div>
+            </div>
+            <div class="col1_row2" id="daybox">25</div>
+            <div class="col1_row3" id="weekday">Monday</div>
+        </div>
+
+        <div class="col2">
+            <div class="col2_row1">Calendar</div>
+            <div class="col2_row2">
+                <a href="http://www.google.com" target="_blank" rel="noopener noreferrer">Go Straight To Google</a>
+            </div>
+            <hr/>
+            <hr/>
+            <div class="col2_row3">
+                <div id="messagebox"></div>
+            </div>
+        </div>
+
+        <div class="col3">
+            <div class="col3_row1" id="background">
+
+                <div class="clock" id="clock">
+                    <div class="hourhand" id="hourhand"></div>
+                    <div class="minhand" id="minhand"></div>
+                    <div class="sechand" id="sechand"></div>
+                </div>
+
+            </div>
+            <div class="col3_row2">
+                <table class="col3_row2_table">
+                    <tr class="tr_row1">
+                        <td class="td_row1_col1">Hour</td>
+                        <td class="td_row1_col1">Min</td>
+                        <td class="td_row1_col1">Sec</td>
+                        <td class="td_row1_col1">Zone</td>
+                    </tr>
+                    <tr class="tr_row2">
+                        <td class="td_row2_col2" rowspan="2" id="hourbox"></td>
+                        <td class="td_row2_col2" rowspan="2" id="minbox"></td>
+                        <td class="td_row2_col2" rowspan="2" id="secbox"></td>
+                        <td class="td_row3_col3" id="day">a.m.</td>
+                    </tr>
+                    <tr class="tr_row3">
+                        <td class="td_row3_col3" id="night">p.m.</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script src="../lib/jquery/jquery.js"></script>
+<script src="./app.js"></script>
+</html>

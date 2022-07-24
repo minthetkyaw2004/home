@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="../css/calculator.css">
+    <link rel="stylesheet" href="../css/calculator-light.css">
+    <link rel="shortcut icon" href="../../src/images/fav/calculator.ico" type="image/x-icon">
+</head>
+<body id="body">
+    <button id="change" onclick="lightmode()">Mode</button>
+    <div class="place">
+        <div class="calculator">
+            <div class="displaybox">
+                <h1 id="displaytext"></h1>
+            </div>
+            <div class="numberpad">
+                <table>
+                    <tr>
+                        <td><div onclick="clearAll()">AC</div></td>
+                        <td><div onclick="clearLast()">C</div></td>
+                        <td><div onclick="display('%')">%</div></td>
+                        <td><div onclick="display('/')">&#xf7;</div></td>
+                    </tr>
+                    <tr>
+                        <td><div onclick="display(7)">7</div></td>
+                        <td><div onclick="display(8)">8</div></td>
+                        <td><div onclick="display(9)">9</div></td>
+                        <td><div onclick="display('*')">&#xd7;</div></td>
+                    </tr>
+                    <tr>
+                        <td><div onclick="display(4)">4</div></td>
+                        <td><div onclick="display(5)">5</div></td>
+                        <td><div onclick="display(6)">6</div></td>
+                        <td><div onclick="display('-')">&#x2212;</div></td>
+                    </tr>
+                    <tr>
+                        <td><div onclick="display(1)">1</div></td>
+                        <td><div onclick="display(2)">2</div></td>
+                        <td><div onclick="display(3)">3</div></td>
+                        <td><div onclick="display('+')">&#x2b;</div></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><div class="zero" onclick="display(0)">0</div></td>
+                        <td><div onclick="display('.')">.</div></td>
+                        <td><div onclick="calc()">&#x3d;</div></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="../js/calculator.js"></script>
+</html>

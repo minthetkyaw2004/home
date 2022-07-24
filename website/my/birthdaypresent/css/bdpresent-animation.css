@@ -1,0 +1,56 @@
+/* message box animation */
+@keyframes myMessage{
+    0%{
+        background-color: rgb(255, 255, 255);
+    }
+    50%{
+        background-color: rgb(185, 162, 162);
+    }
+    100%{
+        background-color: rgb(119, 94, 94);
+    }
+}
+@keyframes myBigger{
+    0%{
+        transform: scale(1.0, 1.0);
+    }
+    50%{
+        transform: scale(1.1, 1.1);
+    }
+    100%{
+        transform: scale(1.0, 1.0);
+    }
+}
+@keyframes myShake{
+    0%{
+        transform: translateX(0px);
+    }
+    25%{
+        transform: translateX(-10px);
+    }
+    75%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+@keyframes myBounce{
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(-25px);
+    }
+    100%{
+        transform: translateY(0px);
+    }
+}
+@keyframes myRotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

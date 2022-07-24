@@ -1,0 +1,37 @@
+$primaryColor:blue;
+$text: red;
+
+.one{
+  background: blue;
+  height: 100px;
+}
+
+.two{
+  background: red;
+}
+
+.three{
+  background: $primaryColor;
+  box-shadow: 10px 10px 10px $primaryColor;
+  color: $text;
+}
+
+@mixin aa {
+  border: 2px solid black;
+  margin: 5px;
+  padding: 10px;
+}
+
+.two{
+
+  h1{
+    @include aa;
+    color: brown;
+  }
+
+  p{
+    color: black;
+  }
+
+}
+

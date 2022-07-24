@@ -1,0 +1,16 @@
+$primary: rgb(54, 54, 187);
+$secondary: rgb(125, 121, 121);
+$warning: rgb(219, 219, 70);
+$danger: rgb(190, 48, 48);
+$sucess: rgb(78, 193, 78);
+
+body{
+    height: 100vh;
+    background: $primary;
+
+    section{
+        height: fit-content;
+        background: $warning;
+        width: 500px;
+    }
+}

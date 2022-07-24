@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery project</title>
+    <style>
+        div{
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            background: blue;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    
+    <button id="btn1">Click to slide up</button>
+    <div id="obj1"></div>
+    <hr/>
+
+    <button id="btn2">Click to move</button>
+    <div id="obj2"></div>
+    <hr/>
+
+</body>
+<script src="../lib/jquery/jquery.js"></script>
+<script>
+
+    $("#btn1").click(function(){
+        $("#obj1").animate({
+            width : "300px",
+            height : "20px"
+        },2000,function(){
+            $("#obj1").animate({
+                width : "100px",
+                height : "100px"
+            },2000,function(){
+                $("#obj1").animate({
+                width : "300px",
+                height : "20px"
+                },2000,function(){
+                    $("#obj1").fadeOut(2000)
+                })
+            })
+        })
+    });
+
+    $("#btn2").click(function(){
+        $("#obj2").animate({
+            width : "+=10px",
+            height : "+=10px"
+        },1000)
+    });
+
+</script>
+</html>

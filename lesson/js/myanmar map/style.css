@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Padauk&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Montserrat', 'Padauk', sans-serif;
+}
+
+body{
+    background: #151212;
+}
+
+.box{
+    width: 80%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info{
+
+}
+
+.info-title{
+    font-size: 30px;
+}
+
+.info-description{
+    margin: 25px 0;
+    font-size: 14px;
+    width: 70%;
+}
+
+.info-place{
+    margin-left: 2%;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.current-place{
+    color: #a8025d;
+    font-size: 28px;
+}
+
+.map svg{
+    stroke: white;
+    stroke-opacity: 0.5;
+}
+
+.map svg path{
+    fill: #a8025d;
+    transition: 0.5s;
+}
+
+.map svg path.active{
+    fill: whitesmoke;
+}
+
+@keyframes mapAnimation {
+    0%{
+        transform: translateY(50px);
+        stroke-opacity: 0.2;
+        shape-margin: 10px;
+        opacity: 0.1;
+    }
+    50%{
+        stroke-opacity: 0.5;
+        opacity: 0.5;
+    }
+    100%{
+        stroke-opacity: 1;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes textAnimation {
+    from{
+        transform: translateY(-50px);
+        opacity: 0.1;
+    } to{
+
+          transform: translateY(0);
+          opacity: 1;
+
+      }
+}

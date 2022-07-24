@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <style type="text/css">
+        body{
+            margin: 0;
+        }
+        .background{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: radial-gradient(
+                blue,
+                purple
+            );
+        }
+        .clockframe{
+            width: 40%;
+            height: 20vh;
+            border-radius: 30px;
+            background: conic-gradient(
+                rgb(87, 217, 72),
+                rgb(156, 213, 11),
+                rgb(0, 200, 255),
+                rgb(181, 50, 181),
+                rgb(182, 47, 135),
+                rgb(17, 20, 186)
+            );
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clock{
+            content: " ";
+            width: 98%;
+            height: 18vh;
+            border-radius: 30px;
+            background: rgb(78, 70, 104);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            box-shadow: 0px 0px 20px greenyellow,
+                        3px 3px 20px rgb(167, 70, 180);
+        }
+        .dot{
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: white;
+        }
+        .hour{
+            width: 30%;
+            height: 100%;
+            background: linear-gradient(grey,white,grey);
+            color: purple;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .min{
+            width: 35%;
+            height: 100%;
+            background: linear-gradient(grey,white,grey);
+            color: purple;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .sec{
+            width: 35%;
+            height: 100%;
+            background: linear-gradient(grey,white,grey);
+            color: purple;
+            font-size: large;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .floathour{
+            width: 30px;
+            height: 10px;
+            background: black;
+        }
+        small{
+            position: relative;
+            bottom: -20px;
+            font-size: 14px;
+        }
+        .half{
+            background: radial-gradient(white,grey);
+            border: 5px solid red;
+            width: 5%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 30px;
+            position: absolute;
+            right: 20%;
+            box-shadow: 0px 0px 10px black,
+                        inset 0px 0px 10px black,
+                        0px 0px 10px white;
+                        inset: 0px 0px 10px white;
+        }
+    </style>
+</head>
+<body>
+    <section class="background">
+        <div class="clockframe">
+            <div class="clock">
+                <!-- <div class="dot"></div> -->
+                <div id="hour" class="hour"></div>
+                <div id="min" class="min"></div>
+                <div id="sec" class="sec"></div>
+            </div>
+        </div>
+        <div class="half" id="half"></div>
+    </section>
+</body>
+<script>
+    let hour = document.getElementById("hour")
+    let min = document.getElementById("min")
+    let sec = document.getElementById("sec")
+
+    setInterval(function(){
+        hour.innerHTML = `<h1>`+new Date().getHours().toString()+`<small>  Hours</small></h1>`
+        min.innerHTML = `<h1>`+new Date().getMinutes().toString()+`<small> Minutes</small></h1>`
+        sec.innerHTML = `<h1>`+new Date().getSeconds().toString()+`<small> Seconds</small></h1>`
+    }, 1000);
+
+    if(new Date().getHours() <= 12){
+        half.innerHTML = '<h1>A.M.</h1>'
+    }
+    else{
+        half.innerHTML = '<h1>P.M.</h1>'
+    }
+    
+</script>
+</html>

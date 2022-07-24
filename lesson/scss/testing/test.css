@@ -1,0 +1,13 @@
+body {
+  height: 100vh;
+  background: #3636bb;
+}
+
+body section {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background: #dbdb46;
+  width: 500px;
+}
+/*# sourceMappingURL=test.css.map */

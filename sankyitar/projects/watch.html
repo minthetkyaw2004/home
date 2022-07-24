@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Clock</title>
+    <style type="text/css">
+        body{
+            overflow: hidden;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            font-size: 20px;
+        }
+        .clockplace{
+            width: 100%;
+            height: 100vh;
+            background: radial-gradient(pink,violet);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .clocksurround{
+            width: 510px;
+            height: 510px;
+            border-radius: 50%;
+            background: conic-gradient(
+                black,
+                red,
+                green,
+                yellow,
+                violet,
+                purple
+            );
+        }
+        .clock{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 4px;
+            border: 1px solid rgb(255, 255, 255);
+            background: radial-gradient(white,grey);
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+        }
+        .clocknum, .num{
+            list-style-type: none;
+            color: rgb(0, 0, 0);
+            font-size: 36px;
+        }
+        .num:nth-of-type(12),.num:nth-of-type(6){
+            position: relative;
+            left: 48%;
+        }
+        .num:nth-of-type(1),.num:nth-of-type(5){
+            position: relative;
+            left: 72%;
+        }
+        .num:nth-of-type(2),.num.num:nth-of-type(4){
+            position: relative;
+            left: 88%;
+        }
+        .num:nth-of-type(3){
+            position: relative;
+            left: 94%;
+        }
+        .num:nth-of-type(11),.num:nth-of-type(7){
+            position: relative;
+            left: 22%;
+        }
+        .num:nth-of-type(10),.num.num:nth-of-type(8){
+            position: relative;
+            left: 8%;
+        }
+        .num:nth-of-type(9){
+            position: relative;
+            left: 3%;
+        }
+        .num:nth-of-type(12){
+            bottom: 73vh;
+            left: 46%;
+        }
+        .num:nth-of-type(6){
+            top: 40vh;
+        }
+        .num:nth-of-type(1){
+            top: 7vh;
+            left: 71%;
+        }
+        .num:nth-of-type(2){
+            top: 12vh;
+        }
+        .num:nth-of-type(3){
+            top: 22vh;
+        }
+        .num.num:nth-of-type(4){
+            top: 33vh;
+        }
+        .num:nth-of-type(5){
+            top: 40vh;
+        }
+        .num:nth-of-type(7){
+            top: 26vh;
+        }
+        .num.num:nth-of-type(8){
+            top: 7vh;
+        }
+        .num:nth-of-type(9){
+            bottom: 15vh;
+        }
+        .num:nth-of-type(10){
+            bottom: 40vh;
+        }
+        .num:nth-of-type(11){
+            bottom: 60vh;
+        }
+        .dot{
+            position: absolute;
+            width:15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: rgb(59, 52, 52);
+            left: 50.5%;
+            top: 50%;
+            z-index: 1;
+        }
+        .hourhand{
+            position: absolute;
+            width: 10px;
+            height: 100px;
+            background: black;
+            bottom: 49%;
+            left: 50.5%;
+            border-radius: 20px;
+            transform-origin: bottom;
+            /* transform: rotate(300deg); */
+        }
+        .minutehand{
+            position: absolute;
+            width: 6px;
+            height: 200px;
+            background: rgb(59, 53, 53);
+            bottom: 49%;
+            left: 51%;
+            border-radius: 20px;
+            transform-origin: bottom;
+            /* transform: rotate(60deg); */
+        }
+        .secondhand{
+            position: absolute;
+            width: 3px;
+            height: 220px;
+            background: rgb(41, 41, 43);
+            bottom: 49%;
+            left: 51%;
+            border-radius: 20px;
+            transform-origin: bottom;
+            /* transform: rotate(260deg); */
+        }
+    </style>
+</head>
+<body>
+
+    <section class="clockplace">
+
+        <div class="clocksurround">
+
+            <div class="clock">
+
+                <div class="dot"></div>
+    
+                <ul class="clocknum">
+    
+                    <li class="num">1</li>
+                    <li class="num">2</li>
+                    <li class="num">3</li>
+                    <li class="num">4</li>
+                    <li class="num">5</li>
+                    <li class="num">6</li>
+                    <li class="num">7</li>
+                    <li class="num">8</li>
+                    <li class="num">9</li>
+                    <li class="num">10</li>
+                    <li class="num">11</li>
+                    <li class="num">12</li>
+    
+                </ul>
+    
+                <div class="hourhand" id="hourhand"></div>
+                <div class="minutehand" id="minutehand"></div>
+                <div class="secondhand" id="secondhand"></div>
+    
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+<script type="text/javascript">
+
+    let hour = document.getElementById("hourhand")
+    let minute = document.getElementById("minutehand")
+    let second = document.getElementById("secondhand")
+
+    setInterval(() => {
+        // console.log(`${new Date().getHours()} : ${new Date().getMinutes()} : ${new Date().getSeconds()}`)
+        nowHour = new Date().getHours()
+        nowMinute = new Date().getMinutes()
+        nowSecond = new Date().getSeconds()
+        second.style.transform = `rotate(${(nowSecond*6)}deg)`
+        minute.style.transform = `rotate(${(nowMinute*6)+(nowSecond/10)}deg)`
+        if(nowHour<12){
+            nowHour = nowHour
+        }
+        else{
+            nowHour = nowHour - 12
+        }
+        hour.style.transform = `rotate(${(nowHour*30)+(nowMinute/10)}deg)`
+    }, 1000);
+
+</script>
+</html>

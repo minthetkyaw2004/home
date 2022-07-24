@@ -1,0 +1,387 @@
+:root{
+    --black:rgb(29, 28, 28);
+    --blue:rgb(102, 150, 255);
+    --green:rgb(121, 255, 88);
+    --orange:rgb(255, 137, 68);
+    --pink:rgba(255, 133, 154, 0.876);
+    --purple:rgba(255, 71, 255, 0.863);
+    --red:rgba(255, 53, 35, 0.883);
+    --white:rgb(223, 209, 209);
+    --yellow:rgb(255, 255, 90);
+}
+body{
+    transition-duration: 5s;
+    margin: 0;
+    background: linear-gradient(to bottom right, var(--blue), var(--purple));
+}
+*{
+    transition-duration: 3s;
+}
+html{
+    scroll-behavior: smooth;
+    transition-duration: 2s;
+}
+
+/* side navbar */
+#sidebar{
+	position: fixed;
+	left: -80px;
+	top: 45vh;
+	background: var(--blue);
+	padding: 2px 10px;
+	border-radius: 40px;
+	width: fit-content;
+	transform: translateX(0px)rotate(270deg);
+    z-index: 2000;
+    transition-duration: 1s;
+}
+.sidebar-enter{
+    animation: mySideIn 1s 1 linear;
+}
+#sidebar #side-holder{
+	display: flex;
+	flex-flow: row-reverse;
+	justify-content: space-evenly;
+	width: fit-content;
+}
+#sidebar #side-holder .sidebar-item{
+	width: fit-content;
+	padding: 2px;
+	background: var(--orange);
+    transform: rotate(90deg);
+	border-radius: 20px;
+    border: 1px solid var(--black);
+	margin: 4px;
+    padding: 5px;
+    transition-duration: 0.2s;
+}
+#sidebar #side-holder .sidebar-item:hover{
+	background: var(--yellow);
+}
+#sidebar #side-holder .sidebar-item .sidebar-text{
+	color: var(--black);
+	font-size: 24px;
+	margin: 0;
+}
+#sidebar-btn{
+    width: fit-content;
+	border-radius: 30%;
+	position: fixed;
+	top: 45vh;
+	left: 7px;
+    font-size: 24px;
+	background: var(--blue);
+    border: 1px solid var(--black);
+	padding: 5px;
+    display: none;
+    transition-duration: 1s;
+    z-index: 2000;
+}
+#sidebar-btn:hover{
+    background: var(--orange);
+}
+
+/* welcome section */
+#welcome{
+    min-height: 50vh;
+    background: var(--orange);
+    padding-top: 50vh;
+    padding-bottom: 10vh;
+}
+#welcome #message-hold{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 40vh;
+    width: fit-content;
+    background: var(--white);
+    padding: 10px 30px;
+    border-radius: 40px;
+    transition-duration: 1s;
+    animation: myMessage 5s 0s infinite alternate;
+    box-shadow: 10px 10px 10px var(--black),0px 0px 10px var(--black);
+}
+#welcome #message-hold:hover{
+    box-shadow: 0px 0px 20px var(--black), 20px 20px 20px var(--black); 
+}
+#welcome #message-hold #message{
+    margin: 0;
+    width: fit-content;
+    font-size: 50px;
+    font-family: cursive;
+    color: var(--red);
+    text-shadow: 0px 2px var(--blue),0px -2px var(--blue),2px 0px var(--blue),-2px 0px var(--blue);
+}
+#welcome #text-hold{
+    background-color: var(--green);
+    transition-duration: 1s;
+    margin-left: 2%;
+    margin-right: 2%;
+    padding: 2%;
+    border-radius: 30px;
+    border: 5px solid var(--purple);
+    box-shadow: 0px 0px 20px var(--purple);
+}
+#welcome #text-hold #text{
+    text-align: justify;
+    font-size: 24px;
+    color: var(--red);
+    /* text-shadow: 0px 1px var(--blue),0px -1px var(--blue),1px 0px var(--blue),-1px 0px var(--blue); */
+}
+#welcome #text-hold:hover{
+    box-shadow: 0px 0px 20px var(--blue);
+}
+
+/* first section  */
+#firstfour{
+    background-color: var(--pink);
+    padding-top: 5vh;
+    padding-bottom: 10vh;
+}
+#firstfour #first-topic{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    font-size: 40px;
+    text-decoration: underline;
+    color: var(--red);
+    padding: 10px 15px;
+    border-radius: 30px;
+    background-color: var(--green);
+}
+#firstfour #first-card-hold{
+    display: flex;
+    justify-content: space-evenly;
+}
+#firstfour #first-card-hold .first-card{
+    width: 24%;
+    background: var(--green);
+    border-radius: 30px;
+    overflow: hidden;
+    box-sizing: border-box;
+    border: 1px solid var(--orange);
+}
+#firstfour #first-card-hold .first-card:hover{
+    box-shadow: 0px 0px 20px var(--black);
+    animation: myBigger 3s alternate infinite;
+}
+#firstfour #first-card-hold .first-card .first-card-img{
+    width: 100%;
+}
+#firstfour #first-card-hold .first-card .first-card-num{
+    position: absolute;
+    background-color: var(--yellow);
+    width: 30px;
+    height: 30px;
+    color: var(--red);
+    text-align: center;
+    font-size: 30px;
+    line-height: 30px;
+    border-radius: 50%;
+    transform: translate(10px, 10px);
+}
+#firstfour #first-card-hold .first-card .first-card-text{
+    color: var(--red);
+    font-size: 20px;
+    font-weight: bold;
+    text-align: justify;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 3%;
+}
+#firstfour #first-card-hold .first-card .first-card-btn-hold{
+    width: 100%;
+    display: none;
+    /* need to be flex by js */
+}
+#firstfour #first-card-hold .first-card .first-card-btn-hold .first-card-btn-left,#firstfour #first-card-hold .first-card .first-card-btn-hold .first-card-btn-right{
+    margin: 0;
+    color: var(--red);
+    width: 50%;
+    border-radius: 0;
+    border: 0;
+    border-top: 1px solid var(--black);
+    font-size: 24px;
+    font-family: fantasy;
+}
+#firstfour #first-card-hold .first-card .first-card-btn-hold .first-card-btn-left{
+    border-right: 1px solid var(--black);
+    background-color: var(--yellow);
+}
+#firstfour #first-card-hold .first-card .first-card-btn-hold .first-card-btn-left:hover{
+    background: rgb(184, 184, 27);
+}
+#firstfour #first-card-hold .first-card .first-card-btn-hold .first-card-btn-right{
+    border-left: 1px solid var(--black);
+    background-color: var(--blue);
+}
+#firstfour #first-card-hold .first-card .first-card-btn-hold .first-card-btn-right:hover{
+    background: rgb(2, 133, 194);
+}
+
+/* second section */
+#secondsix{
+    min-height: 100vh;
+    padding-top: 5vh;
+   background-color: var(--green);
+}
+#secondsix #second-topic{
+    width: fit-content;
+    margin: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5vh;
+    background-color: var(--yellow);
+    color: var(--blue);
+    font-weight: bolder;
+    font-size: 36px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    font-family: fantasy;
+    text-decoration: underline;
+}
+#secondsix #second-card-hold{
+    display: flex;
+    flex-flow: column;
+}
+#secondsix #second-card-hold .second-card{
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--yellow);
+    border: 1px solid var(--pink);
+    color: var(--black);
+    font-family: serif;
+    border-radius: 20px;
+    margin-bottom: 2vh;
+    display: flex;
+    padding: 15px;
+    transition-duration: 2s;
+}
+#secondsix #second-card-hold .second-card:hover{
+    box-shadow: 0px 0px 20px var(--black);
+    animation: myShake 3s alternate infinite;
+}
+#secondsix #second-card-hold .second-card .second-number{
+    position: absolute;
+    transform: translate(10px 10px);
+    font-size: 30px;
+    background-color: var(--blue);
+    color: var(--yellow);
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 50%;
+}
+#secondsix #second-card-hold .second-card .second-card-text{
+    font-size: 24px;
+    text-align: justify;
+}
+#secondsix #second-card-hold .second-card .second-card-btn{
+    width:20%;
+    margin: 2%;
+    background: var(--blue);
+    display: none;       
+    /* need to change by js */
+}
+
+/* Bottom 7 cards section */
+#bottomseven{
+    background: var(--yellow);
+    padding-top: 5vh;
+}
+#bottomseven #bottom-topic{
+    margin: 0;
+    width: fit-content;
+    background: var(--purple);
+    padding: 10px 15px;
+    color: var(--red);
+    font-family: monospace;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    margin-bottom: 10vh;
+    text-decoration: underline;
+}
+#bottomseven #bottom-card-hold1{
+    display: flex;
+    justify-content: center;
+}
+#bottomseven .bottom-card{
+    width: 20%;
+    min-height: 15vh;
+    background-color: var(--purple);
+    margin: 1%;
+    border-radius: 30px;
+    padding: 10px;
+    transition-duration: 1s;
+    overflow: hidden;
+}
+#bottomseven .bottom-card .third-num{
+    background: var(--red);
+    margin: -10px;
+    height: 50px;
+    text-align: center;
+    font-size: 40px;
+    color: var(--yellow);
+    line-height: 50px;
+    transition-duration: 1s;
+}
+#bottomseven .bottom-card:hover{
+    box-shadow: 0px 0px 20px var(--black),
+                0px 0px 10px var(--green);
+    animation: myBounce 3s alternate infinite;
+}
+#bottomseven .bottom-card .front-side{
+    display: block;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--red);
+    font-weight: bolder;
+    text-align: justify;
+    font-size: 24px;
+    /* need to alter none and block by js */
+}
+#bottomseven .bottom-card .backside{
+    display: none;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: var(--red);
+    font-weight: bolder;
+    text-align: justify;
+    font-size: 22px;
+}
+#bottomseven #bottom-card-hold2{
+    display: flex;
+    justify-content: center;
+}
+#bottomseven #bottom-card-hold2 .bottom-card:hover{
+    box-shadow: 0px 0px 20px var(--black);
+}
+
+#end{
+    background: var(--yellow);
+    display: none;
+}
+#end #finaltext{
+    margin-left: auto;
+    margin-right: auto;
+    border-top-left-radius: 30%;
+    border-top-right-radius: 30%;
+    padding-top: 10vh;
+    background-color: rgb(226, 82, 106);
+}
+#end #finaltext p{
+    width: 90%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    font-size: 20px;
+    font-weight: bold;
+}
+#end #finaltext audio{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

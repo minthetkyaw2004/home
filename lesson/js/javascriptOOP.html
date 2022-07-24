@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // factory function
+            
+        function createCircle(radius) {
+            return {
+                radius : radius,
+                draw : function() {
+                    console.log('draw');
+                }
+            };
+        }
+
+        const circle = createCircle(1);
+        circle.draw();
+
+//_________________________________________________________________________________________________
+
+        // constructor function
+
+        function Circle(radius) {
+            // console.log('this',this);
+            this.radius = radius;
+            this.draw = function() {
+                console.log(draw);
+            }
+        }
+        const another = new Circle(1);
+
+//_____________________________________________________________________________________________________
+
+        // functions are objects
+
+        const Circle1 = new Function('radius',`
+        this.radius = radius;
+        this.draw = function() {
+            console.log(draw);
+        }
+        `);
+
+        Circle.call({}, 1); // = new Circle(1);
+
+    </script>
+</body>
+</html>

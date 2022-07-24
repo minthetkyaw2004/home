@@ -1,0 +1,6 @@
+npm init
+# npm install
+
+npm i package & npm i package
+
+npm list

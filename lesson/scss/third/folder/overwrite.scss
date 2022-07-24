@@ -1,0 +1,8 @@
+$theme-colors: (
+    "primary" : pink,
+    "danger" : skyblue
+);
+
+$border-radis:20px;
+
+@import "../node_modules/bootstrap/scss/bootstrap";

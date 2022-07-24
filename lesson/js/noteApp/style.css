@@ -1,0 +1,143 @@
+.background{
+    background: #412568;
+}
+.card{
+    background: transparent;
+    border: none;
+}
+.card-footer{
+    border: none;
+    background: transparent;
+}
+
+.topic{
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    position: relative;
+    user-select: none;
+}
+.topic::after{
+    content: '';
+    width: 20%;
+    height: 8%;
+    background-color: #404040;
+    border-radius: 10px;
+
+    position: absolute;
+    left: 40%;
+    top: 82%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s;
+}
+.topic:hover::after{
+    width: 40%;
+    left: 30%;
+}
+
+
+#note{
+    border: none;
+    border-radius: 5px;
+}
+#note:focus-visible{
+    outline: none;
+}
+
+#addbtn{
+    background: none;
+    border-radius: 10px;
+    position: relative;
+    border: 2px solid lime;
+
+    user-select: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: lime;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s;
+}
+#addbtn::before{
+    content: '';
+    width: 10%;
+    height: 6px;
+    background: lime;
+
+    position: absolute;
+    left: 75%;
+    top: -4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s;
+}
+#addbtn::after{
+    content: '';
+    width: 10%;
+    height: 6px;
+    background: lime;
+
+    position: absolute;
+    left: 15%;
+    bottom: -4px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    transition: all 0.5s;
+}
+#addbtn:hover{
+    background: lime;
+    color: black;
+    transform: scale(1.1,1.1);
+    box-shadow: 0px 0px 5px lime;
+    border-color: black;
+}
+#addbtn:hover::before{
+    background: black;
+    transform: translateX(-600%);
+}
+#addbtn:hover::after{
+    background: black;
+    transform: translateX(600%);
+}
+
+
+
+.itembox{
+    flex-wrap: wrap;
+}
+
+.item{
+    position: relative;
+}
+.item::after{
+    content: 'click to delete item';
+    width: 100%;
+    height: 100%;
+    background-color: red;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    transition: all 1s;
+}
+.item:hover::after{
+    opacity: 1;
+}

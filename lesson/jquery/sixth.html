@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery DOM GET</title>
+</head>
+<body>
+    
+    <p id="p" title="san kyi tar">This is p tag.</p>
+    <input type="text" id="input"/>
+    <select name="" id="select">
+        <option value="mm">Myanmar</option>
+        <option value="cn">China</option>
+        <option value="kr">Korea</option>
+    </select>
+    <button id="btn">Click</button>
+
+</body>
+<script src="../lib/jquery/jquery.js"></script>
+<script>
+
+    $("#btn").click(function(){
+
+        //get
+
+        let  g = $("#p").html(" I wanna change");
+        console.log(g);
+
+        let h = $("#p").attr("I wanna change");
+        console.log(h);
+    })
+
+
+</script>
+</html>

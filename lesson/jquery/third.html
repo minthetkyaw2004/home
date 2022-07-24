@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery fade</title>
+    <style>
+        .obj{
+            width: 300px;
+            height: 100px;
+            background: grey;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- selecting in jquery is the same as that in css -->
+
+    <button class="hideBtn">Hide</button>
+    <button class="showBtn">Show</button>
+    <button class="toggle">Toggle</button>
+    <button class="to">To</button>
+
+    <div class="obj"></div>
+
+    <br/>
+
+    <button class="hideBtn2">Hide</button>
+    <button class="showBtn2">Show</button>
+    <button class="toggle2">Toggle</button>
+
+    <div class="obj2"></div>
+
+</body>
+<script src="../lib/jquery/jquery.js"></script>
+<script>
+
+    // Hide
+    $(".hideBtn").click(function(){
+        $(".obj").fadeOut(1000);
+    });
+
+    // Show
+    $(".showBtn").click(function(){
+        $(".obj").fadeIn(1000,function(){
+            console.log("I am slideup callback.")
+        });
+    });
+
+    // Toggle
+    $(".toggle").click(function(){
+        $(".obj").fadeToggle(1000);
+    });
+
+    // fadeTo
+    $(".to").click(function(){
+        $(".obj").fadeTo(1000,0.); // speed,opacity,callback
+    });
+
+    // Slide
+    $(".hideBtn").click(function(){
+        $(".obj").slideDown(1000);
+    });
+
+    $(".hideBtn").click(function(){
+        $(".obj").slideUp(1000);
+    });
+
+    $(".hideBtn").click(function(){
+        $(".obj").slideToggle(1000);
+    });
+
+</script>
+</html>

@@ -1,0 +1,74 @@
+:root{
+    --dblack:rgb(0, 0, 0);
+    --dblue:rgb(0, 0, 195);
+    --dgreen:rgb(0, 153, 0);
+    --dgreenl:green;
+    --dred:rgb(156, 0, 0);
+    --dpurple:rgba(97, 0, 97, 0.678);
+    --dwhite:rgb(255, 255, 255);
+}
+.darkmode #sidebar{
+    background: var(--dpurple);
+}
+.darkmode #sidebar #side-holder .sidebar-item{
+    background: var(--dgreen);
+}
+.darkmode #sidebar #side-holder .sidebar-item:hover{
+    background: yellowgreen;
+}
+.darkmode #welcome{
+    background: var(--dblue);
+}
+.darkmode #welcome #message-hold #message{
+    color: var(--dpurple);
+    text-shadow: 0px 2px var(--dgreen),0px -2px var(--dgreen),2px 0px var(--dgreen),-2px 0px var(--dgreen);
+}
+.darkmode #welcome #text-hold{
+    background: linear-gradient(to top right,limegreen, orangered);
+    border: 5px solid var(--dpurple);
+}
+.darkmode #welcome #text-hold #text{
+    color: darkblue;
+}
+.darkmode #firstfour{
+    background: linear-gradient( rgb(0, 36, 194), rgb(0, 71, 151));
+}
+.darkmode #firstfour #first-topic{
+    color: aqua;
+    background-color: purple;
+}
+.darkmode #firstfour #first-card-hold .first-card{
+    background: rgb(60, 35, 170);
+}
+.darkmode #firstfour #first-card-hold .first-card .first-card-text{
+    color: rgb(0, 219, 29);
+}
+.darkmode #secondsix{
+    background: rgb(56, 0, 129);
+}
+.darkmode #secondsix #second-topic{
+    background: rgb(0, 121, 190);
+    color: var(--dred);
+}
+.darkmode #secondsix #second-card-hold .second-card{
+    background: #b62060;
+}
+.darkmode #bottomseven{
+    background: #5e5e5e;
+}
+.darkmode #bottomseven #bottom-topic{
+    background: #6f3160;
+    color: #ef13a0;
+}
+.darkmode #bottomseven .bottom-card{
+    background: #524392;
+}
+.darkmode #bottomseven .bottom-card .third-num{
+    background: #8f3ebb;
+}
+.darkmode #bottomseven .bottom-card .front-side{
+    color: #1ae467;
+}
+.darkmode #bottomseven .bottom-card .backside{
+    color: #1ae467;
+}

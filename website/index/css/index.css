@@ -1,0 +1,32 @@
+body{
+    background: url(https://blog.addthiscdn.com/wp-content/uploads/2018/05/11124555/3-Things-Great-Websites-Have-in-Common1-672x372.png);
+    background-attachment: fixed;
+    background-size: cover;
+}
+h1{
+    text-align: center;
+    text-decoration: underline;
+    color: chartreuse;
+    font-weight: 900;
+    font-size: 36px;
+}
+.links{
+    display: block;
+    font-size: 30px;
+    font-family: fantasy;
+    color: rgb(0, 233, 175);
+    font-weight: 700;
+    text-decoration: none;
+    margin-left: 90px;
+    margin-top: 10px;
+    background: #830000;
+    width: fit-content;
+    padding: 10px;
+    border: 2px solid yellow;
+    border-radius: 30px;
+    transition-duration: 1s;
+}
+.links:hover{
+    box-shadow: 0px 0px 20px black;
+    transform: scaleX(1.1);
+}

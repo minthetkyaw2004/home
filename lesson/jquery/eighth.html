@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <style>
+        p{
+            color: pink;
+        }
+        .forText{
+            color: blue;
+            font-size: 30px;
+            font-weight: bolder;
+            font-family: serif;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    
+    <p id="p" class="one two">MIn Ga Lar Par</p>
+    <button id="change">Change</button>
+    <button id="add">ADD</button>
+
+</body>
+<script src="../lib/jquery/jquery.js"></script>
+<script>
+
+
+    // get
+    let pOriginal = $("#p").css("color");
+    console.log(pOriginal);
+
+    $("#change").click(function(){
+
+        // set
+        let p =$("#p").css({
+            color : "blue",
+            fonrSize : "30px"
+        });
+
+        console.log(p);
+    });
+
+    $("#add").click(function(){
+        $("#p").addClass("forText");
+        $("#p").removeClass("one");
+        $("#p").toggleClass("two");
+        $("#p").attr("class");      // show class
+    });
+
+    $("")
+
+
+
+</script>
+</html>

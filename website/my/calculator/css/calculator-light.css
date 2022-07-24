@@ -1,0 +1,33 @@
+.lbody{
+	background: #bfbfbf;
+}
+.lbody .displaybox{
+	color: blue;
+}
+.lbody .numberpad table tr td div{
+	background: #3010bb;
+}
+.lbody .numberpad table tr td div:hover{
+    background: #3010bbbb;
+}
+.lbody .numberpad table tr td div:active{
+    background: #3010bb99;
+}
+.lbody .numberpad table tr:first-child div{
+    background: #808080;
+}
+.lbody .numberpad table tr:first-child div:hover{
+    background: #808080bb;
+}
+.lbody .numberpad table tr:first-child div:active{
+    background: #80808099;
+}
+.lbody .numberpad table tr td:last-child div{
+    background: #cc6060;
+}
+.lbody .numberpad table tr td:last-child div:hover{
+    background: #cc6060bb;
+}
+.lbody .numberpad table tr td:last-child div:active{
+    background: #cc606099;
+}

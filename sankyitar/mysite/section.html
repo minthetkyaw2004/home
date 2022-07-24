@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --blue-simple: rgb(22, 34, 195);
+            --blue-light: rgb(50, 70, 255);
+            --blue-dark: rgb(0, 2, 90);
+            --yellow-light: rgb(243, 219, 0);
+            --yellow-dark: rgb(149, 151, 32);
+            --red-light: rgb(255, 16, 16);
+            --red-dark: rgb(146, 0, 0);
+            --green-light: rgb(50, 251, 0);
+            --green-dark: rgb(0, 109, 0);
+            --dark-text: rgb(22, 20, 20);
+            --white-text: rgb(194, 177, 177);
+            --hover-shadow: rgb(49, 46, 46);
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            background-color: var(--blue-light);
+            margin: 0;
+            transition-delay: 1s;
+        }
+        #section1{
+            padding-top: 100px;
+            height: fit-content;
+            width: 100%;
+            background: url(../images/Website.jpg);
+            background-attachment: fixed;
+            padding-bottom: 10%;
+        }
+        .box{
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+            text-decoration: underline;
+            background-color: var(--yellow-dark);
+            border: 2px solid var(--yellow-light);
+            border-radius: 20px;
+            font-size: 40px;
+            margin-bottom: 200px;
+            padding: 5px 15px;
+            color: var(--blue-simple);
+            animation: fromDown 1s ease-out 0s 1;
+            box-shadow: 0px 0px 20px var(--hover-shadow);
+            text-shadow: 0px 1px var(--red-light), 1px 0px var(--red-light), -1px 0px var(--red-light), 0px -1px var(--red-light);
+        }
+        .box h1{
+            margin: 0;
+        }
+        .cardhold{
+            width: 96%;
+            margin-left: 2%;
+            margin-right: 2%;
+            box-sizing: border-box;
+            border-radius: 30px;
+            height: fit-content;
+            display: flex;
+            padding: 10px;
+            justify-content: space-between;
+            background-color: var(--blue-simple);
+        }
+        .cardhold .card{
+            width: 32%;
+            margin: 0;
+            min-height: 300px;
+            box-sizing: border-box;
+            border: 1px solid var(--blue-dark);
+            border-radius: 30px;
+            padding: 10px;
+            transform: translateX(0px);
+            animation: bigger 1.2s ease-in-out 0.1s 1;
+        }
+        #card1{
+            background-color: var(--yellow-light);
+        }
+        #card2{
+            background-color: var(--red-light);
+        }
+        #card3{
+            background-color: var(--green-light);
+        }
+        .cardhold .card:hover{
+            transition-duration: 0.5s;
+            box-shadow: 0px 0px 20px var(--hover-shadow);
+        }
+        .cardhold .card .card-img{
+            display: block;
+            width: 100%;
+            min-height: 200px;
+            background-color: var(--blue-simple);
+            border: 2px solid black;
+            box-sizing: border-box;
+            border-radius: 20px;
+            color: var(--white-text);
+        }
+        .cardhold .card .card-text{
+            padding: 5px;
+            text-align: justify;
+            height: 200px;
+            font-size: 20px;
+        }
+        .section2{
+            width: 100%;
+            height: fit-content;
+        }
+        .review{
+            width: 100%;
+            text-align: center;
+            text-decoration: underline;
+            color: var(--red-light);
+            font-size: 30px;
+            text-shadow: 1px 0 var(--dark-text),0 1px var(--dark-text),0 -1px var(--dark-text),-1px 0 var(--dark-text);
+        }
+        .clienthold{
+            height: fit-content;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .clienthold .client{
+            box-sizing: border-box;
+            display: inline-block;
+            width: 47%;
+            margin: 1%;
+            padding: 2%;
+            min-height: 300px;
+            border-radius: 30px;
+            background-color: var(--white-text);
+            transition-duration: 0.6s;
+        }
+        .clienthold .client:hover{
+            box-shadow: 0px 0px 20px var(--red-light);
+        }
+        .clienthold .client .client-text{
+            font-size: 20px;
+            color: var(--blue-dark);
+        }
+        .section3{
+            height: 100vh;
+        }
+        @keyframes fromDown {
+            from{
+                transform: translateY(100px);
+            }
+            to{
+                transform: translateY(0px);
+            }
+        }    
+        @keyframes bigger {
+            from{
+                transform:scale(0.2, 0.2);
+            }
+            to{
+                transform: scale(1.0, 1.0);
+            }
+        }
+        @keyframes 
+    </style>
+</head>
+<body>
+    <section id="section1" class="section1">
+        <div id="box1" class="box">
+            <h1 id="introtext" class="introtext">Website Sample</h1>
+        </div>
+        <div id="cardhold" class="cardhold">
+            <div id="card1" class="card">
+                <img src="" alt="card1 related image" id="card1-img" class="card-img"/>
+                <p id="card1-text" class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nobis beatae excepturi sit qui ratione ducimus et in ipsam illum corporis cupiditate, quod unde quae quas, natus, nihil consequuntur possimus.
+                </p>
+            </div>
+            <div id="card2" class="card">
+                <img src="" alt="card2 related image" id="card2-img" class="card-img"/>
+                <p id="card2-text" class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nobis beatae excepturi sit qui ratione ducimus et in ipsam illum corporis cupiditate, quod unde quae quas, natus, nihil consequuntur possimus.
+                </p>
+            </div>
+            <div id="card3" class="card">
+                <img src="" alt="card3 related image" id="card3-img" class="card-img"/>
+                <p id="card3-text" class="card-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime nobis beatae excepturi sit qui ratione ducimus et in ipsam illum corporis cupiditate, quod unde quae quas, natus, nihil consequuntur possimus.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="section2" class="section2">
+        <h1 id="review" class="review">Review of clients</h1>
+        <br/>
+        <div id="clienthold" class="clienthold">
+            <div id="client1" class="client">
+                <p id="client-text1" class="client-text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, beatae amet dignissimos quam similique voluptates ea, eaque sit consectetur velit minima numquam eius! Quasi ipsum, itaque reiciendis repellat nulla architecto?
+                </p>
+            </div>
+            <div id="client2" class="client">
+                <p id="client-text2" class="client-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae commodi unde animi fugit accusamus saepe ex magni sapiente amet pariatur fuga, molestias, suscipit placeat maiores minus explicabo hic dolore soluta?
+                </p>
+            </div>
+            <div id="client3" class="client">
+                <p id="client-text3" class="client-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae commodi unde animi fugit accusamus saepe ex magni sapiente amet pariatur fuga, molestias, suscipit placeat maiores minus explicabo hic dolore soluta?
+                </p>
+            </div>
+            <div id="client4" class="client">
+                <p id="client-text4" class="client-text">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae commodi unde animi fugit accusamus saepe ex magni sapiente amet pariatur fuga, molestias, suscipit placeat maiores minus explicabo hic dolore soluta?
+                </p>
+            </div>
+        </div>
+    </section>
+    <section id="section3" class="section3">
+        <h1 id="activity" class="activity">Activities of this site</h1>
+        <br/>
+        <div id="progress-hold" class="progress-hold">
+
+        </div>
+    </section>
+    <section id="section4" class="section4">
+        <h1 id="contact" class="contact">To contact us,</h1>
+    </section>
+</body>
+<script>
+    
+</script>
+</html>

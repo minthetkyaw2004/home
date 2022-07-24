@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="../css/areacalculator.css">
+	<title>Area Calculator</title>
+</head>
+<body>
+<div>
+	<h1>Area calculator</h1>
+	<label for="width">Width: </label>
+	<input type="number" name="width" id="width" placeholder="width here"/> 
+	<label for="height">Height: </label>
+	<input type="number" name="height" id="height" placeholder="height here"/> 
+	<br/>
+	<input type="button" value="Clear" id="reset"/>
+	<br/>
+	<input type="button" value="Calculate" id="calculate"/>
+	<br/>
+	<br/>
+	<span>The area is </span>
+	<span id="result"></span>
+	<br/>
+	<input type="button" value="Save" id="save"/>
+	<br/>
+	<h3>Recorded memory</h3>
+	<ol id="memory"></ol>
+</div>
+</body>
+<script src="../js/areacalculator.js"></script>
+</html>

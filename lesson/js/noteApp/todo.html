@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>To Do List</title>
+        <!-- bootstrap css1 js1 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/css/bootstrap.min.css" integrity="sha512-o/MhoRPVLExxZjCFVBsm17Pkztkzmh7Dp8k7/3JrtNCHh0AQ489kwpfA3dPSHzKDe8YCuEhxXq3Y71eb/o6amg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!-- jquery ui css1 js1 -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" integrity="sha512-aOG0c6nPNzGk+5zjwyJaoRUgCdOrfSDhmMID2u4+OIslr0GjpLKo7Xm0Ao3xmpM4T8AmIouRkqwj1nrdVsLKEQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <style type="text/css">
+
+            body{
+                min-height: 100vh;
+                background-color: #a6a6a6;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .text-primary{
+                color: rgb(0, 67, 89) !important;
+            }
+
+            #taskinput{
+                background: rgba(255, 255, 255, 0.196);
+                border: none;
+                color: rgb(9, 0, 132);
+                transition: all 1s;
+            }
+
+            #taskinput:focus-visible{
+                transform: scale(1.05,1.05);
+            }
+
+            .list-group-item{
+                padding-left: 5%;
+                box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.4);
+            }
+
+            .list-group-item:active{
+                background-color: grey;
+            }
+
+            .notes{
+                padding-top: 35px;
+                position: relative;
+                font-size: 24px;
+            }
+            .notes::before{
+                content: attr(before);
+                width: 100%;
+                height: 30px;
+
+                font-size: 20px;
+                background-color: #c2c2c2;
+                color: brown;
+
+                letter-spacing: 2px;
+                text-transform: uppercase;
+
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .delbtn,.delbtn::after{
+                display: block;
+                margin-left: auto;
+                border: none;
+                background-color: yellow;
+                border-top-left-radius: 15px;
+                padding: 5px 10px;
+                font-weight: bold;
+                font-size: 20px;
+                letter-spacing: 1px;
+                overflow: hidden;
+                position: relative;
+            }
+            .delbtn::after{
+                content: 'Delete';
+                width: 100%;
+                height: 100%;
+                background: rgba(191, 29, 0, 0.605);
+                color: aliceblue;
+
+                position: absolute;
+                left: 0;
+                top: 0;
+
+                opacity: 0;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                transform: scale(0,0);
+                transform-origin: bottom;
+                transition: all 0.5s;
+            }
+
+            .delbtn:hover::after{
+                transform: scale(1,1);
+                opacity: 1;
+            }
+
+            .delbtn:active{
+                background: rgba(191, 29, 0, 0.9);
+            }
+            
+
+        </style>
+    </head>
+    <body>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="text-primary display-md-5 display-6 fw-bold text-center text-decoration-underline">To Do List App</h1>
+                    <br/><br/>
+                    <div class="form-group col-md-10 col-9 m-auto">
+                        <input type="text" id="taskinput" class="form-control form-control-sm fs-md-2 fs-5 p-md-3 px-md-5 p-1 px-2" placeholder="Type in any task or note you wish..."/>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <h1 id="topic" class="text-danger text-center h4 mt-3"></h1>
+                <div id="list" class="col-10 m-auto"></div>
+            </div>
+        </div>
+
+        <!-- bootstrap css1 js1 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.0-beta1/js/bootstrap.min.js" integrity="sha512-Hqe3s+yLpqaBbXM6VA0cnj/T56ii5YjNrMT9v+us11Q81L0wzUG0jEMNECtugqNu2Uq5MSttCg0p4KK0kCPVaQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- jquery js1 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- jquery ui css1 js1 -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js" integrity="sha512-uto9mlQzrs59VwILcLiRYeLKPPbS/bT71da/OEBYEwcdNUk8jYIy+D176RYoop1Da+f9mvkYrmj5MCLZWEtQuA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+        <script type="text/javascript">
+
+            $(document).ready(function(){    
+                
+                // let alltasks;
+
+                
+                
+                
+                $('#taskinput').keyup(function(e){
+                    if(e.keyCode == 13){
+                        $('#list').append(`<li class="list-group-item bg-light my-3 rounded-0 text-success fw-bold notes">${document.getElementById('taskinput').value}<br/><button class="delbtn">Delete</button></li>`);
+                        document.getElementById('taskinput').value = '';
+                        $(this).blur();
+                    }
+                });
+                function work(){
+                       
+                    let arr = document.querySelectorAll('.list-group-item');
+                    let startcount = 1;
+
+                    function deletenote(){
+                        let count = $(this).parent(0).attr('identity');
+                        $(this).parent(0).hide('clip puff').remove();
+                    }
+    
+                    $('.delbtn').click(deletenote);
+                
+                    function listcount(){
+                        arr = document.querySelectorAll('.list-group-item');
+    
+                        arr.forEach(li => {
+                            li.setAttribute('before',`note number ${startcount}`);
+                            li.setAttribute('identity',`${startcount}`);
+                            startcount++;
+                        });
+                    }
+    
+                    listcount();
+        
+                    if(arr.length == 0){
+                        $('#topic').html('Nothing has been saved yet ...');
+                        $('#topic').removeClass('text-success');
+                        $('#topic').addClass('text-danger');
+                    }else{
+                        $('#topic').html('My Notes');
+                        $('#topic').removeClass('text-danger');
+                        $('#topic').addClass('text-success');
+                    }
+
+                }
+
+                work();
+                $('.delbtn').click(work);
+                setInterval(() => {
+                    work();
+                }, 1000);
+
+
+            });
+                    
+
+        </script>
+    </body>
+</html>

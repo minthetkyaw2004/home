@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Happy Birthday Wai Phyo</title>
+
+    <style>
+
+        body{
+            background: red;
+            margin: 0;
+            font-size: 30px;
+            font-family: "MS Gothic", Serif;
+        }
+        #top{
+            padding-top: 50vh;
+            background: url('../src/images/info/bdcake.jpg');
+            background-size: contain;
+            background-position: top;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .main .above{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            background: #b4b1a8;
+            text-shadow: 0 1px aqua,0 -1px aqua, 1px 0 aqua, -1px 0 aqua;
+            font-size: 50px;
+            text-align: center;
+            padding: 5%;
+            border-radius: 30px;
+        }
+        .main .above:first-line{
+            font-size: 55px;
+        }
+        .main .below{
+            margin-top: 3vh;
+            padding: 3%;
+            font-size: 20px;
+            background: hotpink;
+        }
+        #box{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 3vh;
+            transition-duration: 2s;
+        }
+        button{
+            font-size: 30px;
+            padding: 5px 10px;
+            border-radius: 30px;
+            background: aqua;
+        }
+        .hide{
+            display: none;
+        }
+        .image{
+            width: 96%;
+            border-radius: 30px;
+            transition-duration: 2s;
+        }
+        #end{
+            margin-top: 7vh;
+            font-size: 26px;
+            font-family: Calibri;
+            text-align: center;
+            font-weight: bold;
+        }
+        h3{
+            margin-top: 5vh;
+        }
+    </style>
+
+</head>
+<body>
+
+<div id="top">
+    <div class="main">
+        <div class="above">
+            Happy <br/>
+            Birthday <br/>
+            Wai Phyo !!!
+        </div>
+        <div class="below">
+            မွေးနေ့မှစပြီး သက်ရှည်ကျန်းမာပြီး လိုအင်ဆန္ဒ မှန်သမျှ ပြည့်ပါစေ ၊ ပညာရေး ကျန်းမာရေး စသဖြင့် အစစအရာရာ ပြည့်စုံပါစေကွာ 😉
+        </div>
+    </div>
+</div>
+
+<div id="box">
+    <button id="show">Click here to be surprised 😜😝</button>
+    <img src="../src/images/info/wph.jpg" alt="source from eleven media" id="image" class="image hide"/>
+</div>
+
+<div id="end">
+    That's all, dude. Please accept it as it's the best possible present for the current condition.
+    <br/>
+    Hope you enjoy it 😁.
+    <br/>
+    Fighting for the coming 18 years old ✊✊.
+    <br/>
+    See ya soon !!
+    <br/>
+    <h3>
+        ~~~~~THE END~~~~~
+    </h3>
+</div>
+
+</body>
+<script>
+    let btn = document.getElementById("show");
+    let img = document.getElementById("image");
+
+    btn.addEventListener('click',function (){
+        img.classList.toggle('hide')
+    })
+</script>
+</html>

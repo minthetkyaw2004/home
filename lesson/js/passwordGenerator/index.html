@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="../../lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body class="bg-warning">
+    
+    <div class="container col-12 vh-100 d-flex justify-content-center align-items-center">
+        <div class="box bg-success p-5 col-lg-6 rounded rounded-5">
+            <div class="heading col-12 mb-3">
+                <h1 class="header text-dark-50">Generate a Password</h1>
+            </div>
+            <div class="input col-12 fs-4">
+                <div class="form-group col-12">
+                    <label for="length" class="form-label">Length:</label>
+                    <input type="number" class="input-text col-8 px-2 rounded rounded-5" id="length" name="length" placeholder="length of password you want ..."/>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" name="capital" id="capital" class="input-check"/>
+                    <label for="capital"> include capital letters in the password </label>
+                    <br/>
+                    <input type="checkbox" name="small" id="small" class="input-check"/>
+                    <label for="small"> include small letters in the password </label>
+                    <br/>
+                    <input type="checkbox" name="number" id="number" class="input-check"/>
+                    <label for="number"> include numbers in the password </label>
+                    <br/>
+                </div>
+                <div class="form-group mt-2">
+                    <input type="button" value="Generate password" onclick="work()" id="submit" class="input-submit col-10 bg-danger rounded rounded-pill text-white"/>
+                </div>
+            </div>
+            <div class="output-box col-12 m-3">
+                <div class="output-group">
+                    <h2 class="output-text">Your password is : <span id="output" class="output mt-2 d-block fs-2 text-white-50">********</span></h2>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="../../lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../../lib/jquery/jquery.js"></script>
+    <script src="./app.js"></script>
+</body>
+</html>

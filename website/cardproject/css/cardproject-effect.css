@@ -1,0 +1,7 @@
+.blinktopic:hover{
+    background-color: rgb(255, 104, 78) !important;
+    color: white !important;
+    font-weight: 900 !important;
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.2,1.2);
+}

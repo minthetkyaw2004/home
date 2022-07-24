@@ -1,0 +1,240 @@
+:root{
+    --icon: rgb(31, 28, 218);
+    --icon-light:rgb(0, 22, 121);
+    --smooth: rgb(214, 149, 149);
+    --user: rgba(30, 139, 182, 0.5);
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+}
+/* navigation bar */
+.navbar{
+    width: 100%;
+    height: fit-content;
+    position: fixed;
+}
+.navbar .navigation{
+    width: 96%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    padding: 10px;
+    height: fit-content;
+    display: flex;
+    border-radius: 30px;
+    justify-content: right;
+    background-color: rgba(255, 0, 234, 0.411);
+}
+.navbar .navigation .button{
+    font-size: 30px;
+    margin: 5px 8px;
+    color: var(--icon-light);
+    border-radius: 40%;
+    padding: 15px;
+    transition-duration: 0.5s;
+}
+.navbar .navigation .button:hover{
+    color: var(--icon);
+    background-color: var(--smooth);
+}
+/* top section */
+.top{
+    background: url(../images/city.jpg);
+    background-position: top;
+    height: fit-content;
+    margin-top: 0;
+}
+.top .topcenter{
+    padding-top: 50vh;
+    padding-bottom: 20vh;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 0;
+}
+.top .topbox{
+    background-color: rgba(250, 235, 215, 0.37);
+   font-size: 20px; 
+   text-align: justify;
+   padding: 2%;
+}
+.top .imghold{
+    background-color: rgba(223, 193, 138, 0.5);
+    height: fit-content;
+    display: flex;
+    justify-content: right;
+}
+.top .imghold .sideimg{
+    width: 70%;
+    font-size: 18px;
+    text-align: justify;
+    padding-top: 5%;
+}
+.top .imghold .globe{
+    display: block;
+    width: 30%;
+}
+/* user review */
+.user{
+    min-height: 100vh;
+    background-color: var(--user);
+    padding-bottom: 10vh;
+}
+.user .usertop{
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 10px;
+    font-size: 40px;
+    color: var(--smooth);
+    text-decoration: underline;
+    text-shadow: 0px 1px var(--icon-light),0px -1px var(--icon-light),1px 0px var(--icon-light),-1px 0px var(--icon-light);
+}
+.user .cardhold{
+    display: flex;
+    justify-content: space-evenly;
+}
+.user .cardhold .card{
+    min-height: 50vh;
+    width: 31%;
+    border: 1px solid black;
+    box-sizing: border-box;
+    border-radius: 20px;
+    transform: translateX(0px);
+    /* animation: myLeft 2s ease-out 0s; */
+}
+.user .cardhold .card1{
+    background-color: crimson;
+}
+.user .cardhold .card2{
+    background-color: darkorange;
+}
+.user .cardhold .card3{
+    background-color: lightseagreen;
+}
+.user .cardhold .card .image{
+    width: 96%;
+    margin: 2%;
+    border-radius: 20px;
+}
+.user .cardhold .card .imagetext{
+    font-size: 20px;
+    text-align: justify;
+    padding: 5px;
+}
+@keyframes myLeft{
+    from{
+        transform: translateX(-1000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+.user .cardhold .card20{
+    margin-top: 5%;
+    width: 20%;
+    height: fit-content;
+    background: #fff;
+    padding: 10px;
+    text-align: justify;
+    font-size: 18px;
+    color: red;
+    /* animation: myRight 2s ease-out 0s; */
+}
+.user .cardhold .card20:hover{
+    background-color: rgb(200, 200, 200);
+}
+@keyframes myRight{
+    from{
+        transform: translateX(1000px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+.user #secondhold .card20 .progressbar{
+    height: 30px;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(195, 204, 233);
+    border-radius: 25px;
+}
+.user #secondhold .card20 .progressbar .progress{
+    width: 100%;
+    height: 100%;
+    border-bottom-left-radius: 25px;
+    border-top-left-radius: 25px;
+    background-color: rgb(205, 90, 186);
+    color: black;
+    font-size: 20px;
+    text-align: right;
+    line-height: 30px;
+}
+/* what we do here */
+.activities{
+    min-height: 100vh;
+    background: url(../images/lake.webp);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.activities .acttext{
+    text-decoration: underline;
+    font-size: 36px;
+    margin: 0;
+    padding-top: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(0, 217, 255);
+    text-shadow: 1px 0 rgb(234, 0, 255),-1px 0 rgb(234, 0, 255),0px 1px rgb(234, 0, 255),0px -1px rgb(234, 0, 255);
+}
+.activities .rowhold{
+    display: flex;
+    flex-direction: column;
+}
+.activities .rowhold .rowslide{
+    display: flex;
+    width: 98%;
+    margin: 1%;
+    min-height: 30vh;
+    background-color: darkkhaki;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.activities .rowhold #rowslide2{
+    flex-direction: row-reverse;
+}
+.activities .rowhold .rowslide .rowimg{
+    width: auto;
+}
+.activities .rowhold .rowslide .rowtext{
+    text-align: justify;
+    padding: 10px;
+    font-size: 20px;
+}
+/* contact form */
+.contact{
+    min-height: 100vh;
+    background: linear-gradient(to top right,purple, blue);
+}
+.contact .fieldset{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    border-radius: 30px;
+    background-color: aquamarine;
+}
+.contact .legend{
+    width: fit-content;
+    background-color: rgb(221, 220, 217);
+    border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 900;
+    font-size: 30px;
+    color: rgb(255, 0, 0);
+}
